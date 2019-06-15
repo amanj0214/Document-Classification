@@ -2,7 +2,7 @@
 # "We are drowning in information, while starving for wisdom - E. O. Wilson"
 
 # Import libraries
-from flask import Flask, request, jsonify, send_from_directory, render_template
+from flask import Flask, request, jsonify, render_template
 import pickle
 import traceback
 import json
@@ -13,16 +13,18 @@ app = Flask(__name__)
 
 
 @app.route('/predict',methods=['POST'])
-def get_predictions():
-    return jsonify(details)
+def predict():
+    data = [request.data]
+    predictions = classification_model_util.classifier.predict(data).tolist()
+    print("my_prediction", predictions)
+    return jsonify(predictions)
 
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+	return render_template('home.html')
 
 
 if __name__ == '__main__':
     # Load the model
-    classification_model_util.load_model()
     app.run(port=4444, debug=True)

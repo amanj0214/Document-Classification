@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<script src="{{url_for('static', filename='js/document_classification.js')}}"></script>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Document classification - Machine Learning.
+		</div>
+	</div>
+	</header>
+
+	<div class="ml-container">
+		<p>Enter the content of document</p>
+		<textarea id="text" rows="4" cols="50"></textarea>
+		<br/>
+		<input type="submit" class="btn-info" onclick="predict_category()">
+	</div>
+
+</body>
+</html>

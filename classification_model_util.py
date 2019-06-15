@@ -3,13 +3,19 @@
 
 from sklearn.externals import joblib
 
-model = None
 
+class ModelUtil:
+    model = None
 
-def load_model():
-    classifier = open('model.pkl', 'rb')
-    model = joblib.load(classifier)
+    def __init__(self):
+        pass
 
+    def get_model(self):
+        if self.model == None:
+            #classifier = open('model_2.pkl', 'rb')
+            classifier = open('model_light.pkl', 'rb')
+            self.model = joblib.load(classifier)
+        return self.model
 
-def get_model():
-    return model
+model_util = ModelUtil()
+classifier = model_util.get_model()
