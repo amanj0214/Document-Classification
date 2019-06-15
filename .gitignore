@@ -7,3 +7,4 @@ shuffled-full-set-hashed.csv
 classification_model_util.pyc
 model_2.pkl
 model_light.pkl
+ec2-free.pem
