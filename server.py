@@ -7,7 +7,7 @@ import pickle
 import traceback
 import json
 from flask_cors import CORS
-import model_training
+import classification_model_util
 
 app = Flask(__name__)
 
@@ -24,4 +24,5 @@ def index():
 
 if __name__ == '__main__':
     # Load the model
+    classification_model_util.load_model()
     app.run(port=4444, debug=True)

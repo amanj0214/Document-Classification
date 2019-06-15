@@ -13,6 +13,3 @@ def load_model():
 
 def get_model():
     return model
-
-
-load_model()
