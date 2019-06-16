@@ -3,16 +3,14 @@
 
 # Import libraries
 from flask import Flask, request, jsonify, render_template
-import pickle
-import traceback
 import json
-from flask_cors import CORS
 import classification_model_util
 
-app = Flask(__name__)
+# EB looks for an 'application' callable by default.
+application = Flask(__name__)
 
 
-@app.route('/predict',methods=['POST'])
+@application.route('/predict',methods=['POST'])
 def predict():
     data = [request.data]
     predictions = classification_model_util.classifier.predict(data).tolist()
@@ -20,11 +18,12 @@ def predict():
     return jsonify(predictions)
 
 
-@app.route('/')
+
+@application.route('/')
 def home():
 	return render_template('home.html')
 
 
 if __name__ == '__main__':
     # Load the model
-    app.run(port=4444, debug=True)
+    application.run(port=4444, debug=True)

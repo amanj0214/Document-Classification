@@ -14,11 +14,11 @@ function predict_category() {
       fetch(fetch_details_url, data).then(response => {
           return response.json();
         }).then(data => {
-          alert(data)
+            $('#cat_type').html(data)
         }).catch(err => {
         });
     }
     else{
-        alert("Content is empty!")
+        $('#cat_type').html("--[WARN] : Content cannot be empty--")
     }
 }
