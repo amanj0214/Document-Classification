@@ -40,7 +40,7 @@ class ModelUtil:
         #df = self.load_data()
         df.columns = ['Category', 'Content']
 
-        (features_train, labels_train) = (df.loc[:, 'Content'].values.astype('U'), df.loc[:, 'Category'])
+        (features_train, labels_train) = (df.loc[1:50, 'Content'].values.astype('U'), df.loc[1:50, 'Category'])
 
         ### TfidfVectorizer
         tfidfv = TfidfVectorizer(ngram_range=(1, 2), min_df=0.01, max_df=0.44, norm='l2')

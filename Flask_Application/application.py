@@ -10,7 +10,7 @@ import classification_model_util
 application = Flask(__name__)
 
 
-@application.route('/predict',methods=['POST'])
+@application.route('/predict',methods=['POST', 'GET'])
 def predict():
     data = [request.data]
     prediction = classification_model_util.classifier.predict(data).tolist()[0]
