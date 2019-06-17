@@ -5,8 +5,12 @@ function predict_category() {
     content = $('#text').val()
     if(content != ""){
       data = {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
         method : 'POST',
-        body : {'words':content}
+        body: JSON.stringify({words : content})
        }
       fetch("/predict", data).then(response => {
           return response.json();

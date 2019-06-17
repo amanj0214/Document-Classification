@@ -1,0 +1,3 @@
+curl --header "Content-Type: application/json" --request POST --data "{\"words\":\"SOME RANDOM WORDS\"}"  http://127.0.0.1:4444/predict
+
+curl -X GET http://127.0.0.1:4444/predict?words="WORDS+IN+THE+DOCUMENT"
