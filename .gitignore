@@ -11,3 +11,5 @@ ec2-free.pem
 __pycache__/classification_model_util.cpython-37.pyc
 Flask_Application.zip
 Flask_Application/__pycache__/classification_model_util.cpython-37.pyc
+model_small.pkl
+Flask_Application/__pycache__/application_util.cpython-37.pyc

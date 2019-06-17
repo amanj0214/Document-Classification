@@ -6,13 +6,16 @@ function predict_category() {
     if(content != ""){
       data = {
         method : 'POST',
-        body : content
+        body : {'words':content}
        }
       fetch("/predict", data).then(response => {
           return response.json();
         }).then(data => {
-            $('#cat_type').html(data['prediction'] + ", Confidence : " + data['confidence']+"%")
+            if('prediction' in data){
+                $('#cat_type').html(data['prediction'] + ", Confidence : " + data['confidence']+"%")
+            }
         }).catch(err => {
+            $('#cat_type').html("--[ERROR] " + err)
         });
     }
     else{
