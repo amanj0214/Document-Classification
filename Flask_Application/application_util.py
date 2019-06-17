@@ -29,6 +29,5 @@ def get_predictions(data):
     prediction = classification_model_util.classifier.predict(data).tolist()[0]
     confidence = classification_model_util.classifier.predict_proba(data).max() * 100
     confidence = round(confidence, 2)
-    #print("my_prediction", prediction)
     dict = {"prediction": prediction, "confidence": confidence}
     return dict

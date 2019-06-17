@@ -20,7 +20,7 @@ class ModelUtil:
         :return: Trained model is returned.
         """
         if self.model == None:
-            classifier = open('model_small.pkl', 'rb')
+            classifier = open('model.pkl', 'rb')
             self.model = joblib.load(classifier)
         return self.model
 
