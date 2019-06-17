@@ -1,5 +1,10 @@
 # HeavyWater Machine Learning Problem
 
+### Solution:
+The code for modeling process is present in "Document classification.ipynb." Please open the file to see the steps followed.
+The Flask Application is a lightweight web application which I have deployed on AWS Elastic Beanstalk.
+URL: http://heavywater-document-classifier.us-east-2.elasticbeanstalk.com/
+
 ### Purpose
 
 The purpose of this problem is to evaluate your abilities in several dimensions at once.
