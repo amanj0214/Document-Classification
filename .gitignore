@@ -8,3 +8,5 @@ Flask_Application/__pycache__/classification_model_util.cpython-37.pyc
 model_2.pkl
 model_light.pkl
 shuffled-full-set-hashed.csv
+Flask_Application/model_small.pkl
+Flask_Application/model.pkl
