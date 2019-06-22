@@ -1,15 +1,10 @@
 
 .ipynb_checkpoints/Document classification-checkpoint.ipynb
-model.pkl
-NB_spam_model.pkl
-model_training.pyc
-shuffled-full-set-hashed.csv
+__pycache__/classification_model_util.cpython-37.pyc
 classification_model_util.pyc
+Flask_Application.zip
+Flask_Application/__pycache__/application_util.cpython-37.pyc
+Flask_Application/__pycache__/classification_model_util.cpython-37.pyc
 model_2.pkl
 model_light.pkl
-ec2-free.pem
-__pycache__/classification_model_util.cpython-37.pyc
-Flask_Application.zip
-Flask_Application/__pycache__/classification_model_util.cpython-37.pyc
-model_small.pkl
-Flask_Application/__pycache__/application_util.cpython-37.pyc
+shuffled-full-set-hashed.csv
