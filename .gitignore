@@ -10,3 +10,4 @@ model_light.pkl
 shuffled-full-set-hashed.csv
 Flask_Application/model_small.pkl
 Flask_Application/model.pkl
+Flask_Application/Flask_Application_small.zip
