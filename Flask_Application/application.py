@@ -19,7 +19,7 @@ def predict():
     else:
         result = "[Error]: The words are not found in your request." \
                  "Valid formats is : " \
-                 "curl -i -X GET 'Content-type: application/json' GET http://127.0.0.1:4444/predict?words='WORDS+IN+DOCUMENT' OR " \
+                 "curl -i -X GET - H 'Content-type: application/json' http://127.0.0.1:4444/predict?words='WORDS+IN+DOCUMENT' OR " \
                  "curl -i -H 'Content-type: application/json' -X POST http://127.0.0.1:4444/predict -d '{'words':'WORDS IN MY DOCUMENT'}'"
     resp = jsonify(result)
     resp.status_code = 200
